@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: petlog-frontend
+  namespace: petlog
+  labels:
+    app: petlog-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: petlog-frontend
+  template:
+    metadata:
+      labels:
+        app: petlog-frontend
+    spec:
+      containers:
+        - name: frontend
+          image: ghcr.io/azratul/pet-log-frontend:latest
+          ports:
+            - containerPort: 80
