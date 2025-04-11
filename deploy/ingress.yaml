@@ -1,4 +1,4 @@
-apiVersion: networking.k9s.io/v1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: petlog-ingress
@@ -6,7 +6,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: petlog.kubernetes.lan
+    - host: petlog.unnerv.xyz
       http:
         paths:
           - path: /

@@ -49,4 +49,4 @@ jobs:
           kubectl apply -n petlog -f deploy/deployment.yaml
           kubectl apply -n petlog -f deploy/service.yaml
           kubectl apply -n petlog -f deploy/ingress.yaml
-          kubectl rollout restart deployment $DEPLOY_NAME
+          kubectl rollout restart deployment -n petlog $DEPLOY_NAME
